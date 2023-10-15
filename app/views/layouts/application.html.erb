@@ -19,11 +19,9 @@
 
     <%= render 'articles/navbar' %>
     <div class="container">
+      <% if notice %> <p class="alert alert-success"><%= notice %></p> <% end %> 
+      <% if alert %> <p class="alert alert-danger"><%= alert %></p> <% end %>
    <br/>
-    # <% if notice %>
-    #   <%= render 'layouts/alerts' %>
-    # <% end %>
-
       <%= yield %>
     </div>
 

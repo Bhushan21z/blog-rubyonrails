@@ -24,6 +24,14 @@
     </div>
 
     <div>
+      <%= form.label :user_id %><br>
+      <%= form.number_field :user_id, id: :article_user_id, value: current_user.id, type: :hidden %><br>
+      <% article.errors.full_messages_for(:user_id).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
       <%= form.label :status %><br>
       <%= form.select :status, Visible::VALID_STATUSES, selected: article.status || 'public' %>
     </div>
