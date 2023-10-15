@@ -5,10 +5,10 @@
 
           <div class="blog-post">
             <h2 class="blog-post-title"><%= @article.title%></h2>
-            <h2 class="blog-post-title"><%= @article.id%></h2>
-            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+            <%# <h2 class="blog-post-title"><%= @article.id%><%#</h2> %>
+            <p class="blog-post-meta"><%= @article.created_at %></p>
 
-            <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+            <p><%= @article.body%></p>
             <hr>
             <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
             <blockquote>
